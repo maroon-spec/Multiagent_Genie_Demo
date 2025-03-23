@@ -24,7 +24,7 @@ Mosaic AI Agent Framework と [LangGraph](https://blog.langchain.dev/langgraph-m
 #### TODO箇所
 
 - GENIE_SPACE_ID:  事前に作成したGenie Space ID を入力します。
-- LLM_ENDPOINT_NAME: Supervisorとして動作するLLMの Endpoint名を入力します。こちらはモデルサービングのエンドポイント名です。
+- LLM_ENDPOINT_NAME: Supervisorとして動作するLLMの Endpoint名を入力します。こちらはモデルサービングのエンドポイント名です。LLMはGPT-4o or GPT o1がおすすめ。
 - 適切な権限をもったPAT のSecret情報。[Secretの作成方法](https://qiita.com/maroon-db/items/6e2d86919a827bd61a9b)
   - PATに必要な権限
     - Genie Spaceに「CAN RUN」権限でプロビジョニング
