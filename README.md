@@ -31,5 +31,14 @@ Mosaic AI Agent Framework と [LangGraph](https://blog.langchain.dev/langgraph-m
     - Genie Spaceを動かすSQL Warehouseに「CAN USE」権限でプロビジョニング
     - Unity Catalogのテーブルに「SELECT」権限でプロビジョニング
     - 基盤となるUnityカタログ関数に対するEXECUTEの提供
+- 作成したモデルを保存する Unity Catalog情報を入力。（Catalog / Schema / Model名) 
 
 ![Image](https://github.com/maroon-spec/Multiagent_Genie_Demo/blob/main/multiagent-genie-demo.gif)
+
+
+## 使用方法
+
+1. この Repogitory をDatabricks上の Reposに登録。もしくはノートブック (multiagent_genie_demo.ipyb) をImportする。
+2. 前提条件を満たす
+3. ノートブックを実行すると、最後にMLflowモデルがUnity Catalog上に保存され、そのモデルを使ったモデルサービングエンドポイントが作成されます。
+4. PlayGroundで、作成したエンドポイントを選択すると利用できます。
