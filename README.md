@@ -32,3 +32,4 @@ Mosaic AI Agent Framework と [LangGraph](https://blog.langchain.dev/langgraph-m
     - Unity Catalogのテーブルに「SELECT」権限でプロビジョニング
     - 基盤となるUnityカタログ関数に対するEXECUTEの提供
 
+![Image](https://github.com/maroon-spec/Multiagent_Genie_Demo/blob/main/multiagent-genie-demo.gif)
