@@ -42,3 +42,7 @@ Mosaic AI Agent Framework と [LangGraph](https://blog.langchain.dev/langgraph-m
 2. 前提条件を満たす
 3. ノートブックを実行すると、最後にMLflowモデルがUnity Catalog上に保存され、そのモデルを使ったモデルサービングエンドポイントが作成されます。
 4. PlayGroundで、作成したエンドポイントを選択すると利用できます。
+
+
+## 参考サイト
+https://docs.databricks.com/aws/ja/generative-ai/agent-framework/multi-agent-genie
