@@ -12,6 +12,7 @@
 ## Claudeとは
 
 Claude 3.7 Sonnetは、Anthropicがこれまでに開発した中で最も高度なAIモデルです。複雑な推論やマルチステップの計画立案、長い文脈を伴う対話、文書やデータの深い理解といった高度なタスクにおいて、業界トップクラスの性能を発揮します。Claude 3.7 Sonnetが、AWS・Azure・GCP上のDatabricksでネイティブに利用可能になりました。推論・計画・エージェントタスクに特化したAnthropicの最先端モデルに、安全かつガバナンスの効いた形でアクセスできます。
+https://www.databricks.com/jp/blog/anthropic-claude-37-sonnet-now-natively-available-databricks
 
 ## Genie エージェントを使用する理由
 
