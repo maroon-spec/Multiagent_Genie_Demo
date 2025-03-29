@@ -1,7 +1,6 @@
+# Claude + Genie を使用したエージェントシステム(Mosaic AI Agent Framework)
 
-# Mosaic AI Agent Framework: Genie を使用してマルチエージェントシステムを作成およびデプロイ
-
-Mosaic AI Agent Framework と [LangGraph](https://blog.langchain.dev/langgraph-multi-agent-workflows/) を使用してマルチエージェントシステムを構築します。ここで、[Genie](https://www.databricks.com/product/ai-bi/genie) はエージェントの 1 つです。
+このノートブックでは、Mosaic AI Agent Framework と [LangGraph](https://blog.langchain.dev/langgraph-multi-agent-workflows/) を使用してマルチエージェントシステムを構築する方法を説明します。ここで、[Genie](https://www.databricks.com/product/ai-bi/genie) はエージェントの 1 つです。またSupervisortとしてDatabricks内で利用可能な[AnthropicのClaude](https://www.databricks.com/jp/blog/anthropic-claude-37-sonnet-now-natively-available-databricks)を採用しております。
 このノートブックでは、以下の操作を行います。
 1. LangGraph を使用してマルチエージェントシステムを作成します。
 1. Databricks の機能との互換性を確保するために、LangGraph エージェントを MLflow の `ChatAgent` でラップします。
@@ -9,6 +8,10 @@ Mosaic AI Agent Framework と [LangGraph](https://blog.langchain.dev/langgraph-m
 1. マルチエージェントシステムのログを取得し、デプロイします。
 
 この例は、[LangGraph ドキュメント - マルチエージェント スーパーバイザーの例](https://github.com/langchain-ai/langgraph/blob/main/docs/docs/tutorials/multi_agent/agent_supervisor.ipynb)を基にしています。
+
+## Claudeとは
+
+Claude 3.7 Sonnetは、Anthropicがこれまでに開発した中で最も高度なAIモデルです。複雑な推論やマルチステップの計画立案、長い文脈を伴う対話、文書やデータの深い理解といった高度なタスクにおいて、業界トップクラスの性能を発揮します。Claude 3.7 Sonnetが、AWS・Azure・GCP上のDatabricksでネイティブに利用可能になりました。推論・計画・エージェントタスクに特化したAnthropicの最先端モデルに、安全かつガバナンスの効いた形でアクセスできます。
 
 ## Genie エージェントを使用する理由
 
@@ -18,13 +21,12 @@ Mosaic AI Agent Framework と [LangGraph](https://blog.langchain.dev/langgraph-m
 
 ## 前提条件
 
-- このノートブック内のすべての「TODO」を処理する。
+- このノートブック内のすべての「TODO」を処理する。(Genie SPACE ID/ PAT / Modelを保存するCatalog)
 - Genie Spaceを作成します。Databricksのドキュメントを参照してください（[AWS](https://docs.databricks.com/aws/genie/set-up) | [Azure](https://learn.microsoft.com/azure/databricks/genie/set-up))。
 
 #### TODO箇所
 
 - GENIE_SPACE_ID:  事前に作成したGenie Space ID を入力します。
-- LLM_ENDPOINT_NAME: Supervisorとして動作するLLMの Endpoint名を入力します。こちらはモデルサービングのエンドポイント名です。LLMはGPT-4o or GPT o1がおすすめ。
 - 適切な権限をもったPAT のSecret情報。[Secretの作成方法](https://qiita.com/maroon-db/items/6e2d86919a827bd61a9b)
   - PATに必要な権限
     - Genie Spaceに「CAN RUN」権限でプロビジョニング
