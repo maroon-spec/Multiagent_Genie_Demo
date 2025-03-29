@@ -40,7 +40,7 @@ Claude 3.7 Sonnetは、Anthropicがこれまでに開発した中で最も高度
 
 ## 使用方法
 
-1. この Repogitory をDatabricks上の Reposに登録。もしくはノートブック (claude_genie_demo.ipyb) をImportする。
+1. この Repogitory をDatabricks上の Reposに登録。もしくはノートブック (claude_genie_agent_demo.ipyb) をImportする。
 2. 前提条件を満たす
 3. ノートブックを実行すると、最後にMLflowモデルがUnity Catalog上に保存され、そのモデルを使ったモデルサービングエンドポイントが作成されます。
 4. PlayGroundで、作成したエンドポイントを選択すると利用できます。
